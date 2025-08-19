@@ -9,12 +9,22 @@ public class Gerente extends Funcionario{
         this.area = area;
     }
 
-    @Override
-    public void imprimeDados() {}
+    public String getArea() {
+        return area;
+    }
 
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    @Override
     public Float calculaImposto() {
-        salario = salario - (salario * 0.5f);
+        salario = salario - (salario * 0.05f);
         return salario;
+    }
+    public void imprimeDados() {
+        super.imprimeDados();
+        System.out.println("Área: " + area);
     }
 
 }
